@@ -8,7 +8,7 @@ class HomeController < ApplicationController
    @rows = []
 
    if @name.present? or @region.present?
-	   @rows = factual.table("places").filters("name" => {"$bw" => @name}, "region" => {"$bw" => @region}).rows
+     @rows = factual.table("places").filters("name" => {"$bw" => @name}, "region" => {"$bw" => @region}).rows
    end 
 
   end
